@@ -5,15 +5,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class Calculator {
-    public void someMethod(){
+    private int numberA;
+    private int numberB;
 
+    public Calculator(int numberA, int numberB){
+        this.numberA= numberA;
+        this.numberB= numberB;
     }
-
-    public static void main(String[] args) {
-        //SpringApplication.run(Calculator.class, args);
-        Calculator calculator = new Calculator();
-        calculator.someMethod();
-        System.out.println("Trial");
+    public int add(){
+        return numberA+numberB;
     }
-
+    public int substract(){
+        return numberA-numberB;
+    }
 }
